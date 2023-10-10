@@ -1,0 +1,39 @@
+{
+	"info": {
+		"_postman_id": "aab4428b-6dde-486f-8b19-cc5a37a11327",
+		"name": "Modak",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30408483"
+	},
+	"item": [
+		{
+			"name": "Send Notification",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"type\": \"status\",\r\n    \"user_id\": \"1\",\r\n    \"message\": \"Some new feature!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/notifications",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"notifications"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
