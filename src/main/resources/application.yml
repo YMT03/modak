@@ -1,0 +1,10 @@
+spring.redis:
+  host: redis
+  port: 6379
+
+app:
+  notifications:
+    rate-limit-rules:
+      news: { window: 1d, max: 1 }
+      status: { window: 2m, max: 5 }
+      marketing: { window: 3h, max: 2 }
