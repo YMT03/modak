@@ -15,7 +15,6 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import static org.springframework.http.ResponseEntity.ok;
 
 @ExtendWith(MockitoExtension.class)
 public class NotificationEndpointTest {
@@ -42,7 +41,7 @@ public class NotificationEndpointTest {
                 .thenReturn(notification);
 
         var result = endpoint.send(notificationDTO);
-        assertThat(result).isEqualTo(ok("Notification has been sent successfully"));
+        assertThat(result).isEqualTo(notificationDTO);
 
         verify(validatorMock).validate(notificationDTO);
         verify(mapperMock).mapToBO(notificationDTO);
